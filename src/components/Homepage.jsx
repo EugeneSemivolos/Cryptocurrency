@@ -10,9 +10,11 @@ const { Title } = Typography;
 
 const Homepage = () => {
   const { data, isFetching } = useGetCryptosQuery();
-  const { total, totalExchanges, totalMarketCap, total24hVolume, totalMarkets } = data?.data?.stats;
+  const globalStats = data?.data?.stats;
 
   if (isFetching) return 'Loading...';
+
+  const { total, totalExchanges, totalMarketCap, total24hVolume, totalMarkets } = globalStats;
 
   return (
     <>
