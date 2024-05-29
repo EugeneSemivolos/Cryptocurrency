@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Select, Typography, Row, Col, Avatar, Card } from 'antd';
+import React from 'react';
+import { Typography, Row, Col, Card } from 'antd';
 import moment from 'moment';
 
 import { useGetCryptoNewsQuery } from '../services/cryptoNewsApi';
@@ -7,7 +7,6 @@ import { useGetCryptoNewsQuery } from '../services/cryptoNewsApi';
 const demoImage = 'https://www.bing.com/th?id=OVFT.mpzuVZnv8dwIMRfQGPbOPC&pid=News';
 
 const { Text, Title } = Typography;
-const { Option } = Select;
 
 const News = ({ simplified }) => {
   const { data } = useGetCryptoNewsQuery();
